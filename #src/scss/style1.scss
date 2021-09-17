@@ -1,0 +1,130 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+	  font-family: $font_name;
+	  font-display: swap;
+	  src: url("../fonts/#{$file_name}.woff2") format("woff2"),
+		url("../fonts/#{$file_name}.woff") format("woff");
+	  font-weight: #{$weight};
+	  font-style: #{$style};
+	}
+  }
+
+@import "nullstyle";
+@import "fonts";
+@import "desktop";
+
+button {
+	padding: 20px;
+}
+
+body {
+	font-size: 18px;
+	font-family: "MuseoSansBlack",  "Arial", sans-serif;
+	color: #024873;
+	background-color: #eff6f8;
+}
+
+.container {
+margin: 30px 5%;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: normal;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.header {
+	min-height: 550px;
+	font-family: "MuseoSansBlack",  "Arial", sans-serif;
+	background: linear-gradient(0deg, rgba(239,246,248,1) 0%, rgba(239,246,248,0) 20%, rgba(239,246,248,0) 70%, rgba(239,246,248,1) 99%), url("../img/first-bg-mobile.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__logo {
+		svg {
+			width: 73px;
+			height: 30px;
+		}
+	}
+
+	&__navigation {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+	
+
+	.header__toggle {
+		position: relative;
+		right: 0;
+		width: 20px;
+		height: 12px;
+		background-color: blueviolet;
+	}
+
+	// nav--closed
+	.nav--closed .header__toggle {
+		&::before {
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 2px;
+			top: 12px;
+			right: 0;
+			background-color: #024873;
+			box-shadow: 0 5px 0 0 #024873;
+			border-radius: 1px;
+		}
+		
+		&::after {
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 2px;
+			top: 22px;
+			right: 10px;
+			background-color: #024873;
+		}
+	}
+	
+	//nav--opened 
+	.nav--opened .header__toggle {
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 2px;
+			background-color: black;
+		}
+
+		&::before {
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+		}
+	}
+
+	
+
+
+	
+
+	
+}
+
+
+
+

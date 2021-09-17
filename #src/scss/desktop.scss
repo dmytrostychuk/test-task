@@ -1,0 +1,160 @@
+@media (min-width: 1200px) {
+  .mobile {
+    display: none;
+  }
+
+  // header
+  .header {
+    min-height: 950px;
+    font-family: "MuseoSansBlack", "Arial", sans-serif;
+    background: linear-gradient(
+      0deg,
+      rgba(239, 246, 248, 1) 0%,
+      rgba(239, 246, 248, 0) 20%,
+      rgba(239, 246, 248, 0) 70%,
+      rgba(239, 246, 248, 1) 99%
+      ),
+      url("../img/first-bg-desctop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__container {
+      margin: 40px 7.5%;
+    }
+
+    &__logo {
+      svg {
+        width: 122px;
+        height: 50px;
+      }
+    }
+
+    //menu
+    .menu {
+      &__icon {
+        display: none;
+      }
+
+      &__body {
+        a:hover {
+          color: #ff843f;
+        }
+
+        a:active {
+          opacity: 0.3;
+        }
+      }
+
+      &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .list__items {
+        vertical-align: middle;
+        font-family: "RalewayBold";
+        font-weight: bold;
+        padding: 20px 0;
+
+        &:nth-child(7) {
+          margin-left: 20px;
+          color: #ffffff;
+          background-color: #ff843f;
+          border-radius: 30px;
+
+          a {
+            padding: 20px 25px;
+            color: #ffffff;
+          }
+        }
+      }
+
+      a {
+        padding: 15px 20px;
+        color: #024873;
+      }
+    }
+
+    // header__tittle
+    .desktop {
+      display: block;
+    }
+
+    .container {
+      margin: 0 7.5%;
+    }
+
+    .header__tittle {
+      width: 588px;
+      margin-top: 280px;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 56px;
+
+      &--country {
+        color: #ff843f;
+      }
+    }
+  }
+
+  //main
+  .slider__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 7.5%;
+    text-align: right;
+  }
+
+  //places
+  .places {
+    width: 440px;
+    margin: 0;
+    text-align: left;
+
+    &__tittle {
+      font-size: 36px;
+    }
+
+    &__text {
+      width: 440px;
+      font-size: 18px;
+    }
+  }
+
+  // dots
+  .slider-dots {
+    margin: 0;
+  }
+
+  .slick-dots {
+    top: 250px;
+  }
+
+  .slick-dots li button {
+    width: 70px;
+    height: 5px;
+  }
+
+  //slider
+  .slider {
+    display: flex;
+    width: 900px;
+    min-width: 0;
+    margin-bottom: 50px;
+
+    &__item {
+
+      img {
+        width: 325px;
+      }
+    }
+
+    .slick-slide.slick-active {
+      
+      img {
+        width: 373px;
+      }
+    }
+  }
+}
