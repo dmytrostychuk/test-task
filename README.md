@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://dmytrostychuk.github.io/Focus/">
+  <a href="https://dmytrostychuk.github.io/test-task/">
     dmytrostychuk.github.io/test-task/
   </a>
 </h1>
